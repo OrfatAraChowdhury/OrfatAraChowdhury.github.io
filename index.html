@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orfat Ara Chowdhury — Portfolio</title>
+<meta name="description" content="Orfat Ara Chowdhury — Educator, Social Change Advocate, Youth Leader.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fffaf6; --surface:#ffffff; --ink:#1f1b2e; --muted:#5f586f; --line:#eadfd8;
+  --brand:#e5484d; --grad:linear-gradient(135deg,#e5484d,#ff8a5c 55%,#ffb86b);
+  --shadow:0 10px 30px rgba(60,30,40,.08); --r:20px;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#14111d;--surface:#1d1930;--ink:#f6f1ee;--muted:#b4adc4;--line:#2d2744;--shadow:0 10px 30px rgba(0,0,0,.4)}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15}
+.wrap{width:min(960px,100% - 32px);margin-inline:auto}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+nav{position:fixed;inset:0 0 auto 0;z-index:50;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+nav .wrap{width:min(1120px,100% - 32px);display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:Fraunces,serif;font-weight:700;font-size:1.25rem}.logo b{color:var(--brand)}
+.links{display:flex;gap:26px;font-size:.92rem;font-weight:500}
+.links a{color:var(--muted);transition:.2s}.links a:hover{color:var(--brand)}
+.burger{display:none;background:none;border:0;color:var(--ink);font-size:1.6rem;cursor:pointer}
+
+.hero{padding:130px 0 90px;position:relative;overflow:clip;isolation:isolate;text-align:center}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(80px);opacity:.45;z-index:-1}
+.hero::before{width:380px;height:380px;background:#ff8a5c;top:40px;left:-120px}
+.hero::after{width:420px;height:420px;background:#7c5cff;right:-140px;top:160px;opacity:.28}
+.portrait{position:relative;width:min(300px,70vw);aspect-ratio:4/5;margin:0 auto 34px}
+.portrait::before{content:"";position:absolute;inset:-12px;border-radius:44% 56% 52% 48%/50% 44% 56% 50%;background:var(--grad);animation:morph 9s ease-in-out infinite}
+.portrait img{position:relative;width:100%;height:100%;object-fit:cover;object-position:50% 28%;border-radius:44% 56% 52% 48%/50% 44% 56% 50%;animation:morph 9s ease-in-out infinite;border:6px solid var(--bg)}
+@keyframes morph{50%{border-radius:56% 44% 46% 54%/46% 56% 44% 54%}}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);margin-bottom:14px}
+.hero p{font-size:1.15rem;color:var(--muted);margin-bottom:28px}
+.btn{display:inline-block;padding:13px 30px;border-radius:99px;font-weight:600;background:var(--grad);color:#fff;box-shadow:0 8px 22px rgba(229,72,77,.35);transition:.25s}
+.btn:hover{transform:translateY(-3px)}
+
+section{padding:76px 0}
+section:nth-of-type(even){background:color-mix(in srgb,var(--surface) 55%,var(--bg))}
+h2{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:32px;display:inline-block;padding-bottom:10px;position:relative}
+h2::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:4px;border-radius:4px;background:var(--grad)}
+h3{font-size:1.4rem;margin:38px 0 10px;color:var(--ink)}
+.body>h3:first-child{margin-top:0}
+.body p{color:var(--muted);margin-bottom:16px}
+.body p.date{color:var(--brand);font-weight:600;font-size:.9rem;margin-bottom:6px}
+.lang{display:flex;gap:10px;align-items:center;color:var(--ink)!important;font-weight:500;margin-bottom:6px!important}
+.lang span{font-weight:600;color:var(--brand)}
+
+.pics{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:22px auto 12px}
+.pics button{flex:0 1 calc(50% - 6px);border:0;padding:0;background:var(--surface);cursor:zoom-in;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3}
+.pics img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.pics button:hover img{transform:scale(1.05)}
+.pics.one{max-width:560px}
+.pics.one button{flex-basis:100%;aspect-ratio:auto}
+.pics.one img{height:auto;object-fit:contain}
+
+.contact{text-align:center;padding:70px 0}
+.contact .box{width:min(960px,100% - 32px);margin:auto;background:linear-gradient(135deg,#2a1f4d,#4a2a5e 60%,#8a3355);color:#fff;border-radius:32px;padding:56px 20px}
+.contact h2{color:#fff;margin-bottom:26px}
+.socials{display:flex;justify-content:center;flex-wrap:wrap;gap:14px}
+.socials a{display:flex;align-items:center;gap:10px;padding:12px 22px;border-radius:99px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);font-weight:500;transition:.25s}
+.socials a:hover{background:#fff;color:#2a1f4d;transform:translateY(-4px)}
+.socials svg{width:20px;height:20px;fill:currentColor}
+footer{text-align:center;padding:26px 0;color:var(--muted);font-size:.88rem}
+
+#lb{position:fixed;inset:0;background:rgba(10,8,20,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
+#lb.on{display:flex}
+#lb img{max-height:90vh;max-width:94vw;border-radius:10px}
+#lb button{position:absolute;background:rgba(255,255,255,.15);color:#fff;border:0;width:46px;height:46px;border-radius:50%;font-size:1.4rem;cursor:pointer}
+#lb .x{top:18px;right:18px}#lb .p{left:14px}#lb .n{right:14px}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media(max-width:860px){
+  section{padding:56px 0}
+  .burger{display:block}
+  .links{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);display:none}
+  .links.open{display:flex}.links a{padding:14px 20px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">Orfat<b>.</b></a>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+    <div class="links" onclick="this.classList.remove('open')"><a href="#about">About</a><a href="#work">Experience</a><a href="#activities">Volunteer Work</a><a href="#certificates">Certificates</a><a href="#skills">Skills</a></div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="portrait"><img src="img/44.jpg" alt="Orfat Ara Chowdhury" fetchpriority="high"></div>
+    <h1>Orfat Ara <span class="grad">Chowdhury</span></h1>
+    <p>Educator | Social Change Advocate | Youth Leader</p>
+    <a class="btn" href="#about">Learn More</a>
+  </div>
+</header>
+
+<section id="about"><div class="wrap"><h2 class="rv">About Me</h2><div class="body">
+<p class="rv">My name is Orfat Ara Chowdhury. I hold both a Bachelor&#x27;s and Master&#x27;s degree in English Language and Literature from the University of Chittagong. My academic journey has been not just about literary exploration, but also about developing strong analytical, communication, and leadership skills that I&#x27;ve applied beyond the classroom—especially in the realm of social change and community development.</p>
+<p class="rv">I am an English Educator with over seven years of freelance experience as an English Teacher and one year in Patenga Public School and College as a full-time English teacher where I’m executing the same responsibilities in addition to that I am a class teacher who has to prepare grade sheets, report cards and conduct parents teacher meeting on a regular basis.</p>
+<p class="rv">With a strong commitment to equity and empowerment, I have been actively involved in volunteer work that addresses critical societal issues. As a teaching volunteer with Campaign RED, I work to debunk deeply ingrained taboos surrounding menstruation. My focus is on educating communities, especially young people, about menstrual health and hygiene, aiming to dismantle the harmful stigmas that continue to undermine the reproductive rights and social participation of women and girls.</p>
+<p class="rv">At Shwapno Youth Development Organization, I not only volunteered in youth leadership programs but also led the Graphic Design Team, contributing to campaigns, workshops, and events that foster awareness and civic responsibility. My leadership and creativity merged here, allowing me to engage with young minds and collaborate with peers to amplify youth voices on national and international platforms.</p>
+<p class="rv">In addition, I&#x27;ve served as a Teaching Assistant for the Youth Society for Research and Action (YSRA), where I supported foundational research education for students from diverse academic and cultural backgrounds. This role helped me deepen my understanding of academic research while also honing my mentoring and facilitation skills.</p>
+<p class="rv">My participation in programs such as the Youth Leadership Bootcamp by BYLC, as well as workshops on public speaking, self-defense, and debating, has enriched my confidence and equipped me with the tools to advocate for myself and others effectively.</p>
+<p class="rv">I am a strong believer in the power of knowledge-sharing and practical exposure. I aspire to work with mission-driven organizations where I can learn the intricacies of their operations, contribute meaningfully to their vision, and enhance their efficiency through innovative thinking and empathy-driven communication.</p>
+<p class="rv">Beyond academics and advocacy, I am an explorer by nature. I find peace in traveling and connecting with the world around me—be it through nature, stories, or shared experiences. Each journey inspires me to remain grounded, compassionate, and curious.</p>
+<h3 class="rv">Language Proficiency</h3>
+<p class="lang rv"><span>Bengali</span>Native Speaker</p>
+<p class="lang rv"><span>English</span>B2</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/33.jpg" alt="Language Proficiency"></button></div>
+</div></div></section>
+<section id="work"><div class="wrap"><h2 class="rv">Work Experience</h2><div class="body">
+<p class="rv">Joined Patenga Public School and College on March 1, 2026 as a full-time English teacher where I’m executing the same responsibilities in addition to that I am a class teacher who has to prepare grade sheets, report cards and conduct parents teacher meetings on a regular basis. Prior to that  I was an English Educator with over seven years of freelance experience of tutoring students in private home tutoring.</p>
+<div class="pics" data-g><button type="button"><img loading="lazy" src="img/21.jpg" alt="Work Experience"></button><button type="button"><img loading="lazy" src="img/16.jpg" alt="Work Experience"></button><button type="button"><img loading="lazy" src="img/30.jpg" alt="Work Experience"></button><button type="button"><img loading="lazy" src="img/13.jpg" alt="Work Experience"></button><button type="button"><img loading="lazy" src="img/12.jpg" alt="Work Experience"></button></div>
+<h3 class="rv">Research Assistant</h3>
+<p class="rv">Have the chance to work as a RA which turned into an incredible work experience with much things to learn.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/5.jpg" alt="Research Assistant"></button></div>
+<h3 class="rv">Teacher Assistant</h3>
+<p class="rv">I was selected as one of the best TAs in Foundation on Research Season: 05 where my responsibilities were helping teachers conduct research classes, supporting students in ensuring the completion of research homework/exercise, maintaining effective communication with teachers and students, ensuring participants&#x27; attendance and class schedules.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/10.jpg" alt="Teacher Assistant"></button></div>
+<h3 class="rv">Teacher Assistant</h3>
+<p class="rv">I was selected as one of the best TAs in Foundation on Research Season: 06 where my responsibilities were helping teachers conduct research classes, supporting students in ensuring the completion of research homework/exercise, maintaining effective communication with teachers and students, ensuring participants&#x27; attendance and class schedules.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/22.jpg" alt="Teacher Assistant"></button></div>
+<h3 class="rv">Teacher Assistant</h3>
+<p class="rv">I was selected as one of the best TAs in Foundation on Research Season: 07 where my responsibilities were helping teachers conduct research classes, supporting students in ensuring the completion of research homework/exercise, maintaining effective communication with teachers and students, ensuring participants&#x27; attendance and class schedules.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/3.jpg" alt="Teacher Assistant"></button></div>
+</div></div></section>
+<section id="activities"><div class="wrap"><h2 class="rv">Experience &amp; Activities</h2><div class="body">
+<h3 class="rv">Teaching volunteer in Campaign Red</h3>
+<p class="rv">I work on to debunk stigma and change long standing ideas and attitudes of society around menstruation that negatively have been affecting women&#x27;s both reproductive and socio-economic rights. Campaign RED does not only engage youths to address the stigma around menstruation, it also advocates with schools and employers to bring awareness for creating opportunities for women to manage their menstruation in a dignified and safe way. Creating a pool of trainers from Campaign RED&#x27;s senior volunteers to be able to mentor our upcoming fellows.</p>
+<div class="pics" data-g><button type="button"><img loading="lazy" src="img/9.jpg" alt="Teaching volunteer in Campaign Red"></button><button type="button"><img loading="lazy" src="img/15.jpg" alt="Teaching volunteer in Campaign Red"></button><button type="button"><img loading="lazy" src="img/27.jpg" alt="Teaching volunteer in Campaign Red"></button><button type="button"><img loading="lazy" src="img/8.jpg" alt="Teaching volunteer in Campaign Red"></button></div>
+<h3 class="rv">Intervention at Goschi High School</h3>
+<p class="rv">Completed an incredible session about debunking stigma and changing long standing ideas and attitudes of society around menstruation in school going students. As during puberty, girls begin their menstrual periods but they have a little knowledge about menstruation and thus have many misconceptions and taboo. My part was to educate these young people to have a clear picture about what to do and what not to do and also deal with awkward situations with dignity.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/11.jpg" alt="Intervention at Goschi High School"></button></div>
+<h3 class="rv">Menstrual Hygiene Day 2018</h3>
+<p class="rv">Campaign Red celebrates Menstrual Hygiene Day and as a teaching volunteer of this organization I presented a poem about menstrual and also took part in the rally walking with the people and holding a placard that said &#x27;Menstruation Matters&#x27;. Menstrual Hygiene Day is an annual awareness day on May 28 to highlight the importance of good menstrual hygiene management (MHM). It was initiated by the German-based NGO WASH United in 2014 and aims to benefit women and girls worldwide.</p>
+<div class="pics" data-g><button type="button"><img loading="lazy" src="img/24.jpg" alt="Menstrual Hygiene Day 2018"></button><button type="button"><img loading="lazy" src="img/31.jpg" alt="Menstrual Hygiene Day 2018"></button><button type="button"><img loading="lazy" src="img/34.jpg" alt="Menstrual Hygiene Day 2018"></button><button type="button"><img loading="lazy" src="img/6.jpg" alt="Menstrual Hygiene Day 2018"></button></div>
+<h3 class="rv">Infectious Awareness Campaign</h3>
+<p class="rv">At the initiative of volunteers of Chattogram Zone of Swapna Youth Development Organization, a campaign on &#x27;Infectious Awareness&#x27; was organized at Alhaj Eyakub Ali Girls High School and College in Chittagong to make students aware of the most discussed and dangerous infectious disease &#x27;COVID-19&#x27; (CoronaVirus). Even in such adverse conditions, this program was successfully conducted and I was part of the management. It was a very incredible session. My part was to organize the content and make placards and also helping in the presentation.</p>
+<div class="pics" data-g><button type="button"><img loading="lazy" src="img/42.jpg" alt="Infectious Awareness Campaign"></button><button type="button"><img loading="lazy" src="img/35.jpg" alt="Infectious Awareness Campaign"></button></div>
+<h3 class="rv">International Youth Development Summit 2020</h3>
+<p class="rv">Another great achievement of my life. I was an organizer of the International Youth Development Summit 2020 organised by Shwapno Youth Development Organisation. SYDO is the first organisation where I have involved myself a lot. And This International Summit was the first summit where I was not only a participate but I also worked with the Graphics Team and Campus Ambassador Management Team. Our all team mates worked very hard. After a month of hardworking we have successfully complemented this Summit. Especially, the experience of working on the Graphics Team and Campus Ambassador Management Team was great for me. As Shwapno believes in youth power and enthusiasm, youths from all over the world and from any school,college or universities become a part of this summit. They get themselves engaged in youth development &amp; have the opportunity to increase communication with more people. with a bunch of energetic youth to spread more positive things in the world.</p>
+<div class="pics" data-g><button type="button"><img loading="lazy" src="img/40.jpg" alt="International Youth Development Summit 2020"></button><button type="button"><img loading="lazy" src="img/2.jpg" alt="International Youth Development Summit 2020"></button><button type="button"><img loading="lazy" src="img/32.jpg" alt="International Youth Development Summit 2020"></button><button type="button"><img loading="lazy" src="img/43.jpg" alt="International Youth Development Summit 2020"></button></div>
+<h3 class="rv">SYDO Star of the Month</h3>
+<p class="rv">After consistent work in the Graphics Team as a team leader I was selected SYDO&#x27;s Star of the Month. I love working with those which I find challenging. Graphis was completely new to me as back then we did not have much access to this type of work. But my passion for learning a new skill made me work hard and also gained me an award.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/38.jpg" alt="SYDO Star of the Month"></button></div>
+<h3 class="rv">Published Writing</h3>
+<p class="date rv">Published: 23 September 2020</p>
+<p class="rv">My writing has been published in the &quot;We Read&quot; section of the practice page of Dainik Ittefaq, where I write some questions and their answers for class 8 students. This will create a clear idea of ​​the student&#x27;s entire chapter and will help them answer knowledge level and multiple choice questions from their text book.</p>
+<div class="pics" data-g><button type="button"><img loading="lazy" src="img/29.jpg" alt="Published Writing"></button><button type="button"><img loading="lazy" src="img/28.jpg" alt="Published Writing"></button></div>
+<h3 class="rv">Youth Skill Hacks 1.0</h3>
+<p class="rv">Completed my part as an organizer to the program about CV Writing Hacks and Interview Tips in the title of Youth Skill Hacks 1.0 to celebrate &quot;World Youth Skills Day 2021&quot;. During Covid-19 Pandemic, our young society moved in different directions. While many youths are developing their skills by joining different organizations, on the other hand, some are trying to set up their own businesses by opening their own Facebook page or group and spreading sales of different products. As the world celebrates World Youth Skill Day on 15th July,&#x27;Shwapno Youth Development Organization&#x27; also celebrates the day with their skillful event. To Celebrate World Youth Skill Day 2021, we organized a Training Program named &#x27;&#x27;Youth Skill Hacks 1.0&#x27;&#x27;.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/23.jpg" alt="Youth Skill Hacks 1.0"></button></div>
+</div></div></section>
+<section id="certificates"><div class="wrap"><h2 class="rv">Certificates &amp; Training</h2><div class="body">
+<h3 class="rv">Foundation on Research Season: 05</h3>
+<p class="rv">Completed as a Teacher Assistant where my responsibilities were helping teachers conduct research classes, supporting students in ensuring the completion of research homework/exercise, maintaining effective communication with teachers and students, ensuring participants&#x27; attendance and class schedules.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/25.jpg" alt="Foundation on Research Season: 05"></button></div>
+<h3 class="rv">Foundation on Research Season: 06</h3>
+<p class="rv">Completed as a Teacher Assistant where my responsibilities were helping teachers conduct research classes, supporting students in ensuring the completion of research homework/exercise, maintaining effective communication with teachers and students, ensuring participants&#x27; attendance and class schedules.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/19.jpg" alt="Foundation on Research Season: 06"></button></div>
+<h3 class="rv">Foundation on Research Season: 07</h3>
+<p class="rv">Completed as a Teacher Assistant where my responsibilities were helping teachers conduct research classes, supporting students in ensuring the completion of research homework/exercise, maintaining effective communication with teachers and students, ensuring participants&#x27; attendance and class schedules.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/41.jpg" alt="Foundation on Research Season: 07"></button></div>
+<h3 class="rv">Social Leadership Hackathon</h3>
+<p class="rv">Participated in the Social Leadership Hackathon organized by BYLC Chattogram. The Social leadership Hackathon is a half-day workshop where students from diverse backgrounds can come together to learn and exercise leadership to solve a problem in their community.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/7.jpg" alt="Social Leadership Hackathon"></button></div>
+<h3 class="rv">CUDS Debate Workshop</h3>
+<p class="rv">From my school days I always wanted to participate in debate but couldn&#x27;t because of not having enough time for extracurricular activities. As I grew up, my want of debating was achieved as I participated in The 14th CUDS Debate workshop and became a regular member of CUDS.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/37.jpg" alt="CUDS Debate Workshop"></button></div>
+<h3 class="rv">Self Defense</h3>
+<p class="rv">I believe everyone should learn the art of self defense as it is the skill that would protect one when needed. So I learned self defense at Chittagong Jela Krira Sangstha.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/26.jpg" alt="Self Defense"></button></div>
+</div></div></section>
+<section id="skills"><div class="wrap"><h2 class="rv">Skills &amp; Learning</h2><div class="body">
+<h3 class="rv">Graphic Design</h3>
+<p class="rv">While I love learning new skills for fun, I learnt Graphic Design to join as a volunteer in an organization. This earned me two certificates one as a star of the month and another as a Graphic Team Leader. Learning new skills that do not always require to be used in a professional I believe. Sometimes we just want to learn a new skill just for fun. Besides, I believe in knowing the basics of skill if not mastering the skill as we don&#x27;t know which knowledge would be needed in the future.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/4.jpg" alt="Graphic Design"></button></div>
+<h3 class="rv">Project Management</h3>
+<p class="rv">I love learning new skills. Learning new skills do not always require to be used in a professional I believe. Sometimes we just want to learn a new skill just for fun. Besides, I believe in knowing the basics of skill if not mastering the skill as we don&#x27;t know which knowledge would be needed in the future. In this course I learnt the basics of Project Management.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/14.jpg" alt="Project Management"></button></div>
+<h3 class="rv">Microsoft Excel</h3>
+<p class="rv">Though I did complete a course on Microsoft Office, I also wanted to conduct a separate course focused just on Microsoft Excel to learn it even better.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/20.jpg" alt="Microsoft Excel"></button></div>
+<h3 class="rv">Microsoft Word</h3>
+<p class="rv">Though I did complete a course on Microsoft Office, I also wanted to conduct a separate course focused just on Microsoft Word to learn it even better.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/39.jpg" alt="Microsoft Word"></button></div>
+<h3 class="rv">Typography</h3>
+<p class="rv">I love doing typography in my free time to post on social media though not like professional work. But I love my not so perfect work as I am a girl who loves aesthetics. It also helps me in Graphic design to modify texts even better.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/1.jpg" alt="Typography"></button></div>
+<h3 class="rv">Public Speaking</h3>
+<p class="rv">Back in school I was a quiet girl who would not speak in class even if she was told by the teachers let alone presenting assignments in front of the whole class. Though I wanted to, there would be something that would hold me back, not letting me speak in front of the whole class. As I grew up I talked to people but not as much as I should be. That was the reason to conduct this course, to overcome my fear of public speaking in a very renowned organization called BYLC.</p>
+<div class="pics one" data-g><button type="button"><img loading="lazy" src="img/17.jpg" alt="Public Speaking"></button></div>
+</div></div></section>
+
+<section class="contact" id="contact" style="background:none;padding-top:40px">
+  <div class="box">
+    <h2 style="display:block">Connect with me</h2>
+    <div class="socials">
+      <a href="https://www.facebook.com/orfat.chowdhury" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.9.4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.5-.2-2.6 0-4.3 1.6-4.3 4.4v2.5H7.3v3.3h2.8V22z"/></svg>Facebook</a>
+      <a href="https://www.instagram.com/orfat_chowdhury" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.500 4zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.300-3.300a1.200 1.200 0 1 1 0 2.400 1.200 1.200 0 0 1 0-2.400z"/></svg>Instagram</a>
+      <a href="https://x.com/Orfat_Chowdhury" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.100l-6.800 7.700L22 21h-6.200l-4.900-6.300L5.300 21H2.200l7.200-8.300L1.800 3h6.400l4.400 5.800zm-1.100 16.200h1.700L7.200 4.700H5.400z"/></svg>X (Twitter)</a>
+      <a href="https://www.linkedin.com/in/orfat-ara-chowdhury-635713185/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4.300 8.500h3.500V20H4.300zM6 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm4.200 5.500h3.300v1.600c.5-.9 1.700-1.900 3.500-1.900 3.700 0 4.400 2.400 4.400 5.600V20h-3.500v-5.500c0-1.300 0-3-1.800-3s-2.100 1.400-2.100 2.900V20h-3.500z"/></svg>LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="y"></span> Orfat Ara Chowdhury</footer>
+
+<div id="lb" role="dialog" aria-modal="true"><button class="x" aria-label="Close">✕</button><button class="p" aria-label="Previous">‹</button><img alt=""><button class="n" aria-label="Next">›</button></div>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.rv,.pics').forEach(el=>{el.classList.add('rv');io.observe(el)});
+const lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+let set=[],idx=0;
+const show=()=>{lbi.src=set[idx].src;lbi.alt=set[idx].alt};
+document.querySelectorAll('[data-g]').forEach(g=>{
+  const imgs=[...g.querySelectorAll('img')];
+  imgs.forEach((im,i)=>im.closest('button').addEventListener('click',()=>{set=imgs;idx=i;show();lb.classList.add('on')}));
+});
+const close=()=>lb.classList.remove('on');
+const step=d=>{idx=(idx+d+set.length)%set.length;show()};
+lb.querySelector('.x').onclick=close;
+lb.querySelector('.p').onclick=e=>{e.stopPropagation();step(-1)};
+lb.querySelector('.n').onclick=e=>{e.stopPropagation();step(1)};
+lb.onclick=e=>{if(e.target===lb)close()};
+addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;
+  if(e.key==='Escape')close();if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1)});
+</script>
+</body>
+</html>
